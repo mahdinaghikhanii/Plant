@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant/pages/detail/detail_page.dart';
 
 import '../models/plants.dart';
 import 'constans.dart';
@@ -18,7 +19,13 @@ class PlantWidget extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    DetailPage(plantId: plantList[index].plantId)));
+      },
       child: Container(
         decoration: BoxDecoration(
           color: Constants.primaryColor.withOpacity(.1),

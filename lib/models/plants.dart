@@ -14,17 +14,17 @@ class Plant {
 
   Plant(
       {required this.plantId,
-        required this.price,
-        required this.category,
-        required this.plantName,
-        required this.size,
-        required this.rating,
-        required this.humidity,
-        required this.temperature,
-        required this.imageURL,
-        required this.isFavorated,
-        required this.decription,
-        required this.isSelected});
+      required this.price,
+      required this.category,
+      required this.plantName,
+      required this.size,
+      required this.rating,
+      required this.humidity,
+      required this.temperature,
+      required this.imageURL,
+      required this.isFavorated,
+      required this.decription,
+      required this.isSelected});
 
   //List of Plants data
   static List<Plant> plantList = [
@@ -40,7 +40,7 @@ class Plant {
         imageURL: 'assets/images/plant-one.png',
         isFavorated: true,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -55,7 +55,7 @@ class Plant {
         imageURL: 'assets/images/plant-two.png',
         isFavorated: false,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -70,7 +70,7 @@ class Plant {
         imageURL: 'assets/images/plant-three.png',
         isFavorated: false,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -85,7 +85,7 @@ class Plant {
         imageURL: 'assets/images/plant-one.png',
         isFavorated: false,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -100,7 +100,7 @@ class Plant {
         imageURL: 'assets/images/plant-four.png',
         isFavorated: true,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -115,7 +115,7 @@ class Plant {
         imageURL: 'assets/images/plant-five.png',
         isFavorated: false,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -130,7 +130,7 @@ class Plant {
         imageURL: 'assets/images/plant-six.png',
         isFavorated: false,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -145,7 +145,7 @@ class Plant {
         imageURL: 'assets/images/plant-seven.png',
         isFavorated: false,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
     Plant(
@@ -160,20 +160,22 @@ class Plant {
         imageURL: 'assets/images/plant-eight.png',
         isFavorated: false,
         decription:
-        'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
+            'This plant is one of the best plant. It grows in most of the regions in the world and can survive'
             'even the harshest weather condition.',
         isSelected: false),
   ];
 
   //Get the favorated items
-  static List<Plant> getFavoritedPlants(){
-    List<Plant> _travelList = Plant.plantList;
-    return _travelList.where((element) => element.isFavorated == true).toList();
+  static List<Plant> getFavoritedPlants() {
+    List<Plant> travelList = Plant.plantList;
+    return travelList.where((element) => element.isFavorated == true).toList();
   }
 
   //Get the cart items
-  static List<Plant> addedToCartPlants(){
-    List<Plant> _selectedPlants = Plant.plantList;
-    return _selectedPlants.where((element) => element.isSelected == true).toList();
+  static List<Plant> addedToCartPlants() {
+    List<Plant> selectedPlants = Plant.plantList;
+    return selectedPlants
+        .where((element) => element.isSelected == true)
+        .toList();
   }
 }
