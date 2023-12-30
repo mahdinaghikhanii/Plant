@@ -2,9 +2,11 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 
 import 'package:plant/constans/constans.dart';
+import 'package:plant/pages/profile/profile.dart';
 
 import '../models/plants.dart';
 import 'cart/cart.dart';
+import 'favorite/favorite.dart';
 import 'home/home.dart';
 
 class RootPage extends StatefulWidget {
@@ -24,14 +26,9 @@ class _RootPageState extends State<RootPage> {
   List<Widget> _widgetOptions() {
     return [
       const HomePage(),
-      // FavoritePage(
-      //   favoritedPlants: favorites,
-      // ),
-      HomePage(),
-      CartPage(
-        addedToCartPlants: myCart,
-      ),
-      HomePage()
+      FavoritePage(favoritedPlants: favorites),
+      CartPage(addedToCartPlants: myCart),
+      const ProfilePage()
     ];
   }
 

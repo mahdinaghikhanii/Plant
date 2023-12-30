@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:plant/pages/detail/detail_page.dart';
 
-import '../models/plants.dart';
-import 'constans.dart';
+import '../../models/plants.dart';
+import '../constans.dart';
 
 class PlantWidget extends StatelessWidget {
   const PlantWidget({

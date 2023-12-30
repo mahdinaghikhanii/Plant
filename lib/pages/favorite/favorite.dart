@@ -1,7 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../constans/constans.dart';
-import '../../constans/widgets.dart';
+import '../../constans/widgets/widgets.dart';
 import '../../models/plants.dart';
 
 class FavoritePage extends StatefulWidget {
@@ -25,19 +26,18 @@ class _FavoritePageState extends State<FavoritePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 100,
-                    child: Image.asset('assets/images/favorited.png'),
-                  ),
+                      height: 100,
+                      child: Icon(CupertinoIcons.heart,
+                          size: 80, color: Constants.primaryColor)),
                   const SizedBox(
                     height: 10,
                   ),
                   Text(
                     'Your favorited Plants',
                     style: TextStyle(
-                      color: Constants.primaryColor,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 18,
-                    ),
+                        color: Constants.primaryColor,
+                        fontWeight: FontWeight.w800,
+                        fontSize: 18),
                   ),
                 ],
               ),

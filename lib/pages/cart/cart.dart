@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../constans/constans.dart';
-import '../../constans/widgets.dart';
+import '../../constans/widgets/widgets.dart';
 import '../../models/plants.dart';
 
 class CartPage extends StatefulWidget {
